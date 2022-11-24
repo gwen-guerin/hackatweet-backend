@@ -11,6 +11,7 @@ router.post('/signup', (req, res) => {
   //  let inputName = req.body.name;
   let inputPwd = req.body.password;
   const hash = bcrypt.hashSync(req.body.password, 10);
+  // console.log(req.body)
 
   // Check if the user has not already been registered
   if (inputUserName && inputPwd) {
@@ -45,7 +46,7 @@ router.post('/signin', (req, res) => {
       if (data === null) {
         res.json({ result: false, error: 'User not found' });
       } else {
-        res.json({ result: true });
+        res.json({ result: true , user: data});
       }
     });
   } else {
