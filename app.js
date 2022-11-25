@@ -11,13 +11,8 @@ var tweetsRouter = require('./routes/tweets');
 
 var app = express();
 
-<<<<<<< HEAD
-const cors = require('cors');
-app.use(cors({origin: true}));
-=======
 const cors = require('cors')
 app.use(cors({origin:true}))
->>>>>>> c404133e375b169a943391a1086184e0e6269f5e
 
 app.use(logger('dev'));
 app.use(express.json());
