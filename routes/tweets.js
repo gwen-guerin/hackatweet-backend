@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
     });
 
     newTweet.save().then((newTweet) => {
-      console.log('newTweet', newTweet)
+      // console.log('newTweet', newTweet)
       res.json({ result: true, newTweet: newTweet });
     });
   }
