@@ -8,7 +8,6 @@ router.post('/', (req, res) => {
   const tweetContent = req.body.tweet;
   if (tweetContent) {
     const newTweet = new Tweet({
-    // firstname:
       tweet: tweetContent,
     });
 
